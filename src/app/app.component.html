@@ -1,0 +1,35 @@
+<p class="Task">Task1</p>
+<input type="number" [(ngModel)]="inputNumber">
+<p *ngIf="inputNumber != null">Квадрат введеного числа: {{ +inputNumber * +inputNumber }}</p>
+
+<p class="Task">Task2</p>
+<input type="number" (keyup)="onkeyUp($event)">
+<p *ngIf="inputNumber != null">Квадрат введеного числа: {{ +inputNumber * +inputNumber }}</p>
+
+<p class="Task">Task3</p>
+<ul>
+  <li *ngFor="let country of countries">{{ country }}</li>
+</ul>
+<input type="text" [(ngModel)]="newCountry" (blur)="addCountry()">
+
+<p class="Task">Task4</p>
+<input type="checkbox" [(ngModel)]="isChecked"><br>
+<a href="#" (click)="isChecked=true">Позначити</a><br>
+<a href="#" (click)="isChecked=false">Зняти позначку</a>
+
+<p class="Task">Task5</p>
+<input type="checkbox" [(ngModel)]="isChecked"><br>
+<a href="#" (click)="toggleCheckbox()">Змінити стан чекбоксу</a>
+
+<p class="Task">Task6</p>
+<input type="checkbox" [(ngModel)]="isChecked"><br>
+<input type="checkbox" [(ngModel)]="isChecked"><br>
+
+<p class="Task">Task7</p>
+<ul>
+  <li *ngFor="let course of courses">
+    <input type="checkbox" [checked]="course.completed">
+    {{ course.name }}
+  </li>
+</ul>
+
